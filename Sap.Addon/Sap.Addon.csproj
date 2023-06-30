@@ -49,8 +49,13 @@
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
-    <Reference Include="SAPBusinessOneSDK">
-      <HintPath>..\packages\SDK\SAPBusinessOneSDK.dll</HintPath>
+    <Reference Include="Sap.Data.Hana.v4.5, Version=2.7.26.0, Culture=neutral, PublicKeyToken=0326b8ea63db4bc4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Sap.Data.Hana.v4.5.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\SAPBusinessOneSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -78,8 +83,6 @@
     <Compile Include="Helpers\GlobalVariables.cs" />
     <Compile Include="Helpers\Menu.cs" />
     <Compile Include="Helpers\SAPColumn.cs" />
-    <Compile Include="Log\Logger.cs" />
-    <Compile Include="Log\Matrix.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,13 +93,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Dll\Sap.Data.Hana.v4.5.dll" />
+    <Content Include="Dll\SAPBusinessOneSDK.dll" />
     <Content Include="Images\imgLogo.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Log\Query.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\" />
+    <Folder Include="Log\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
